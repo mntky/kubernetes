@@ -32,6 +32,7 @@ import (
 )
 
 func main() {
+	//　乱数作る用にシード設定(設定しないと毎回同じ値)
 	rand.Seed(time.Now().UnixNano())
 
 	command := app.NewControllerManagerCommand()
