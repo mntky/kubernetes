@@ -109,6 +109,7 @@ controller, and serviceaccounts controller.`,
 			verflag.PrintAndExitIfRequested()
 			utilflag.PrintFlags(cmd.Flags())
 
+			//s.Configの場所 cmd/kube-controller-manager/app/options/options.go:392
 			c, err := s.Config(KnownControllers(), ControllersDisabledByDefault.List())
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "%v\n", err)
